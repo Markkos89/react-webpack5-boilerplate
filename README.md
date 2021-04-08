@@ -1,23 +1,12 @@
-# react-webpack-5-tailwind-2
+# react-webpack-5
 
-React 17 Boilerplate with React 17, Webpack 5, Tailwind 2, HMR, using babel, sass, with a hot dev server and an optimized production build
-
-[Demo](https://dreamy-shirley-041c74.netlify.app/)
-
-Maintained by [Altafino - Full-Stack Go/JS Development](https://altafino.com)
-
-## Last Changes (the newest first):
-- added SVGR as a webpack loader to import your SVG directly as a React Component.
-- added build-staging script. same as build but using .env.staging
-- added dotenv-webpack to handle process.env.VARS
-- added Prettier
-- added react-refresh-webpack-plugin for HMR
+React 17 Boilerplate with React 17, Webpack 5, Bootstrap, Hot Module Reloading, using babel, sass, with a hot dev server and an optimized production build
 
 ## Installation
 
 ```
-git clone https://github.com/altafino/react-webpack-5-tailwind-2.git
-cd react-webpack-5-tailwind-2
+git clone https://github.com/markkos89/react-webpack5-boilerplate.git
+cd react-webpack5-boilerplate
 yarn / npm i
 ```
 To use it for your own project the easiest way is to use the green Template Button on top right of this repo on Github.
@@ -44,7 +33,6 @@ You can view the development server at `localhost:3000`.
 
 - [React 17](https://reactjs.org/)
 - [Webpack 5](https://webpack.js.org/)
-- [Tailwind 2](https://tailwindcss.com)
 - [PostCss](https://postcss.org/)  
 - [Babel](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
