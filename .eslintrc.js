@@ -24,7 +24,7 @@ module.exports = {
     "import/no-duplicates": "error",
     "import/no-unresolved": "error",
     "import/named": "error",
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "endOfLine":"auto" }],
     "react/no-typos": "error",
     "react/no-unused-state": "error",
     "react/jsx-no-bind": "error",
