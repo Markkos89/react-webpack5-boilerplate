@@ -13,21 +13,21 @@ module.exports = merge(common, {
   output: {
     path: paths.build,
     publicPath: '/',
-    filename: 'js/[name].[contenthash].bundle.js',
+    filename: 'js/[name].[contenthash].bundle.js'
   },
   plugins: [
     new Dotenv({
-      path: './.env.production',
+      path: './.env.production'
     }),
     // Extracts CSS into separate files
     // Note: style-loader is for development, MiniCssExtractPlugin is for production
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
-      chunkFilename: '[id].css',
-    }),
+      chunkFilename: '[id].css'
+    })
   ],
   module: {
-    rules: [],
+    rules: []
   },
   optimization: {
     minimize: true,
@@ -36,12 +36,12 @@ module.exports = merge(common, {
     // instead of having their own. This also helps with long-term caching, since the chunks will only
     // change when actual code changes, not the webpack runtime.
     runtimeChunk: {
-      name: 'runtime',
-    },
+      name: 'runtime'
+    }
   },
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
-  },
+    maxAssetSize: 512000
+  }
 })

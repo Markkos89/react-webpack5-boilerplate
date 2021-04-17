@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: paths.build,
     filename: '[name].bundle.js',
-    publicPath: '/',
+    publicPath: '/'
   },
 
   // Customize the webpack build process
@@ -24,7 +24,7 @@ module.exports = {
 
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
-      chunkFilename: '[id].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css'
     }),
 
     // Copies files from target to destination folder
@@ -34,10 +34,10 @@ module.exports = {
           from: paths.src + '/assets',
           to: 'assets',
           globOptions: {
-            ignore: ['*.DS_Store'],
-          },
-        },
-      ],
+            ignore: ['*.DS_Store']
+          }
+        }
+      ]
     }),
 
     // Generates an HTML file from a template
@@ -46,8 +46,8 @@ module.exports = {
       title: 'Project Title',
       favicon: paths.src + '/assets/icons/favicon.png',
       template: paths.public + '/index.html', // template file
-      filename: 'index.html', // output file
-    }),
+      filename: 'index.html' // output file
+    })
   ],
 
   // Determine how modules within the project are treated
@@ -68,23 +68,23 @@ module.exports = {
             options: {
               postcssOptions: {
                 ident: 'postcss',
-                plugins: [autoprefixer],
-              },
-            },
-          },
-        ],
+                plugins: [autoprefixer]
+              }
+            }
+          }
+        ]
       },
 
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: ['@svgr/webpack']
       },
 
       // Images: Copy image files to build folder
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
 
       // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|)$/, type: 'asset/inline' },
-    ],
-  },
+      { test: /\.(woff(2)?|eot|ttf|otf|)$/, type: 'asset/inline' }
+    ]
+  }
 }

@@ -1,7 +1,7 @@
 import { Component } from 'react'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className='flex items-center justify-center h-screen'>
         Webpack 5 boilerplate with React 17, using babel, sass, with a hot dev
