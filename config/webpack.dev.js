@@ -18,7 +18,7 @@ module.exports = merge(common, {
     open: false,
     compress: true,
     hot: true,
-    port: 3000,
+    port: 3000
   },
 
   module: {
@@ -35,19 +35,19 @@ module.exports = merge(common, {
               // ... other options
               plugins: [
                 // ... other plugins
-                require.resolve('react-refresh/babel'),
-              ].filter(Boolean),
-            },
-          },
-        ],
-      },
-    ],
+                require.resolve('react-refresh/babel')
+              ].filter(Boolean)
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new Dotenv({
-      path: './.env.development',
+      path: './.env.development'
     }),
     // new webpack.HotModuleReplacementPlugin(),
-    new ReactRefreshWebpackPlugin(),
-  ].filter(Boolean),
+    new ReactRefreshWebpackPlugin()
+  ].filter(Boolean)
 })
